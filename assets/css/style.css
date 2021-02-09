@@ -15,13 +15,26 @@ h1 {
     color: honeydew;
     text-align: center;
     font-family: 'Bangers';
+    height: 5em;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)  
 }
-h2 {
-    color: honeydew;
-}
+
+
 .button {
-    justify-content: center;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: darkslateblue;
 }
-.card {
-    width: 50%;
-}
+
+
