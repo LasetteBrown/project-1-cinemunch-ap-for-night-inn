@@ -1,3 +1,18 @@
 body{
     background: grey;
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.saved {
+    color: honeydew; 
+}
+h1 {
+    color: honeydew;
+    text-align: center;
+}
+.button {
+    justify-content: center;
 }
