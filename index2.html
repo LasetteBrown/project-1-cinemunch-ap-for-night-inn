@@ -13,16 +13,44 @@
 
 <body>
     <div class="container">
-    
+
         <div class="header">
             <p>Saved Searches</p>
         </div>
-        
-        <!-- Compressed JavaScript -->
-        <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-            integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-        <script src="./assets/js/script.js"></script>
-    </div>
+        <div class="grid-x">
+            <div class="cell small-6">
+                <h2>Watch This</h2>
+                <div class="card">
+                    <div class="card-section">
+                        <img src="assets/img/generic/rectangle-1.jpg">
+                    </div>
+                    <div class="card-section">
+                        <p>This is a simple card with an image inside a `.card-section`.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell small-6">
+                <h2>Order This</h2>
+                <div class="card">
+                    <div class="card-section">
+                        <img src="assets/img/generic/rectangle-1.jpg">
+                    </div>
+                    <div class="card-section">
+                        <p>This is a simple card with an image inside a `.card-section`.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button" data-dropdown-menu type="button" data-toggle="example-dropdown-bottom-center">Try Again</button>
+        <div class="dropdown-pane" data-dropdown-menu data-position="bottom" data-alignment="center" id="example-dropdown-bottom-center"
+            data-dropdown data-auto-focus="true">
+            <p>Test</p>
+        </div>
+
 </body>
+
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+<script src="./assets/js/script.js"></script>
 
 </html>

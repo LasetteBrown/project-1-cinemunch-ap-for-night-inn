@@ -6,13 +6,22 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
+
 .saved {
     color: honeydew; 
 }
+
 h1 {
     color: honeydew;
     text-align: center;
+    font-family: 'Bangers';
+}
+h2 {
+    color: honeydew;
 }
 .button {
     justify-content: center;
+}
+.card {
+    width: 50%;
 }
