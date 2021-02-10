@@ -7,12 +7,46 @@ body{
     background-size: cover;
 }
 
+<<<<<<< HEAD
 .saved {
+=======
+.site {
+>>>>>>> 276962a9305b3af712246c3a32618544c30d2c7f
     color: honeydew; 
+    text-align: right;
+    padding-right: 20px;
+
 }
 
 h1 {
     color: honeydew;
+    font-size: 70px;
+    text-align: center;
+    font-family: 'Bangers';
+    height: 5em;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)  
+}
+h2 {
+    color: honeydew;
+    text-align: center;
+}
+
+.card {
+    width: 50%;
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(212, 212, 212);
+}
+.card-section {
     text-align: center;
     font-family: 'Bangers';
     height: 5em;
@@ -35,6 +69,10 @@ h1 {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     background-color: darkslateblue;
+<<<<<<< HEAD
+=======
+    border-radius: 10px;
+>>>>>>> 276962a9305b3af712246c3a32618544c30d2c7f
 }
 
 
