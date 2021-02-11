@@ -1,0 +1,48 @@
+
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+h2 {
+    font-family: 'Encode Sans Condensed', sans-serif;
+    font-weight: bolder;
+    font-size: 175%;
+    text-decoration: underline;
+    
+}
+
+
+
+
+.card {
+    background-color: black;
+    color: blanchedalmond;
+    position: relative;
+    border-style: none;
+}
+
+#movie-card {
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+#restaurant-card {
+    text-align: center;
+}
+
+
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
