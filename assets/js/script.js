@@ -3,7 +3,6 @@ console.log("linked")
 var movieRec = ""
 var foodRec = ""
 
-
 var movies = [];
 var requestOptions = {
     method: 'GET',
@@ -17,7 +16,6 @@ history = JSON.parse(localStorage.getItem("previous"));
 if (history === null) {
     history = []
 }
-
 
 
 function movieApi() {
@@ -65,7 +63,6 @@ function saveRecs() {
 
 function displayMovie() {
     //and displayed on the page with title, summery, and poster image of the film
-
     $("#movie-card").html("")
 
     var movieTitle = $("<h3>")
@@ -79,7 +76,6 @@ function displayMovie() {
     var movieSummery = $("<p>")
     movieSummery.text(movieRec.overview)
     $("#movie-card").append(movieSummery)
-
 }
 
 function displayFood() {
@@ -104,7 +100,6 @@ function displayFood() {
 
 
 
-
 function getFood() {//and a random delivery restaurant is generated
     //fetch random restaurane from api
     foodRec = //random restaurant fetched
@@ -116,7 +111,6 @@ function getFood() {//and a random delivery restaurant is generated
 $(".helpBtn").on("click", function () {
     //redirect to a new page
     window.location.href = "index2.html"
-
     randomMovie()
     // getFood()
 })
@@ -152,7 +146,6 @@ $(".historyBtn").on("click", function () {
     //then we are redirected to a third page
     window.location.href = "index3.html"
 })
-
 
 movieApi()
 //which displays past recommendations.

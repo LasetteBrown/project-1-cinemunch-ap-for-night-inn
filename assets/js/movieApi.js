@@ -16,14 +16,11 @@ function movieApi() {
                 movies = movies.concat(data.results)
                 // console.log(data.results);
                 // if (i === 4){
-
                 // console.log(movies);
-
                 // call function to update display here
                 //}
             })
     }
-
     randomMovie()
 }
 movieApi()
