@@ -1,7 +1,7 @@
 
 var restaurants = [];
 var cuisines = [];
-var locations = [];  
+var locations = [];
 var requestOptions = {
     method: 'GET',
     headers: { "user-key": "ddc0804243a2709a5f5ba68838e78c7b" },

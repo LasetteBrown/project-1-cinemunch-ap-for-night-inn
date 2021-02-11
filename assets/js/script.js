@@ -63,19 +63,19 @@ function saveRecs() {
 
 function displayMovie() {
     //and displayed on the page with title, summery, and poster image of the film
-    $("#movie-card").html("")
+    // $("#movie-card").html("")
+    console.log("display attempt")
+    // var movieTitle = $("<h3>")
+    $("#movie-title").text(movieRec.title)
+    // $("#movie-card").append(movieTitle)
 
-    var movieTitle = $("<h3>")
-    movieTitle.text(movieRec.title)
-    $("#movie-card").append(movieTitle)
+    // var movieImage = $("<img>")
+    $("#movie-image").attr("src", "https://image.tmdb.org/t/p/w500" + movieRec.poster_path)
+    // $("#movie-card").append(movieImage)
 
-    var movieImage = $("<img>")
-    movieImage.attr("src", "https://image.tmdb.org/t/p/w500" + movieRec.poster_path)
-    $("#movie-card").append(movieImage)
-
-    var movieSummery = $("<p>")
-    movieSummery.text(movieRec.overview)
-    $("#movie-card").append(movieSummery)
+    // var movieSummery = $("<p>")
+    $("#movie-summery").text(movieRec.overview)
+    // $("#movie-card").append(movieSummery)
 }
 
 function displayFood() {
@@ -119,8 +119,8 @@ $(".helpBtn").on("click", function () {
 //(optional) use those parameters to limit our search
 
 //when the 'choose a new movie' button is clicked
-$(".newMovieBtn").on("click", function () {
-    getMovie()
+$(".redo-movie").on("click", function () {
+    randomMovie()
 })
 
 //Then a different random movie is generated
@@ -131,6 +131,10 @@ $(".newFoodBtn").on("click", function () {
     getFood()
 })
 
+$(".redo-both").on("click", function () {
+    randomMovie()
+    getFood()
+})
 //then a different restaurant is generated 
 //and replaces the restaurant displayed on the page.
 
