@@ -7,65 +7,127 @@ body{
     background-size: cover;
 }
 
-.site {
-    color: honeydew; 
-    text-align: right;
-    padding-right: 20px;
-
+header {
+    height: 100px;
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+img {
+    border-radius: 10px;
+}
+
+.logo {
+    margin-top: 10px;
+    height: 100px;
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px;
+}
+
+/* .site {
+    color: honeydew; 
+    padding-right: 20px;
+    float: left;
+    font-size: 100px;
+    font-family: 'Just Another Hand', cursive;
+} */
 
 h1 {
     color: honeydew;
-    font-size: 70px;
+    font-size: 50px;
+    padding-top: 50px;
     text-align: center;
-    font-family: 'Bangers';
-    height: 5em;
-    position: relative;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)  
+    font-family: 'Bangers'; 
 }
+
 h2 {
+    font-size: 50px;
     color: honeydew;
     text-align: center;
+    font-family: 'Bangers';
 }
 
 .card {
-    width: 50%;
+    width: 75%;
     display: block;
     margin-bottom: 25px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(212, 212, 212);
+    border-radius: 10px;
 }
+
 .card-section {
     text-align: center;
-    font-family: 'Bangers';
-    height: 5em;
-    position: relative;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)  
 }
 
+.card-head {
+    font-weight: bold;
+    font-size: 25px;
+}
 
 .button {
-    position: relative;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    font-family: 'Bangers';
+    border-radius: 10px;
+}
+
+.btn {
+   
     background-color: darkslateblue;
     border-radius: 10px;
 }
 
+/* .helpButton {
+    display: block;
+   
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    align-content: center;
+} */
+
+/* .redo-button {
+    align-content: center;
+} */
+
+.save {
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkslateblue;
+}
+
+.redo-button {
+    display: block;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    font-size: 30px;
+}
+
+.dropdown-pane {
+    background-color: rgb(212, 212, 212);
+}
+.redo {
+    width: 100%;
+    background-color: darkslateblue; 
+    border: rgb(212, 212, 212);
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 1px;
+}
 
