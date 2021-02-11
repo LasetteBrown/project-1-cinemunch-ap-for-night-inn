@@ -9,15 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="header grid-x">
-        <img src="./assets/images/Logo With Writing.png" class="logo" alt="Logo"></img>
+    <div class="header">
+        <p class="site">CineMunch</p>
     </div>
+    <div class="container">
 
         <div class="header">
             <p>Saved Searches</p>
@@ -32,23 +30,16 @@
                     <div class="card-section">
                         <p>This is a simple card with an image inside a `.card-section`.</p>
 
-    <div class="container">
-
         <div class="grid-x">
-            <div class="card-cell cell small-12 medium-6">
+            <div class="card-cell cell small-6">
                 <h2>Watch This</h2>
                 <div class="card" id="movie-card">
                     <div class="card-section">
-
-                        <p class="card-head">Semi-Pro</p>
-
-
+                        <p>Semi-Pro</p>
                         <img
                             src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR0S7Vrhykg5xuCUtbt-Wb8kP3SlRxwGzLpGOcE1FhfCn-9RkDp">
                     </div>
-
-                    <div id="movie-head" class="card-section">
-
+                    <div class="card-section">
 
                         <p>In 1976, singer Jackie Moon (Will Ferrell) uses the profits from his only hit single to
                             fulfill a longtime dream of owning a basketball team. His team, the Flint Michigan Tropics,
@@ -57,20 +48,24 @@
                             slam-dunk their chance for survival.</p>
 
                     </div>
-                    
-                    <a class="button large save" href="#">Save Movie</a>
                 </div>
             </div>
-            <div class="card-cell cell small-12 medium-6">
+            <div class="cell small-6">
                 <h2>Order This</h2>
 
 
                 <div class="card">
+                    <div class="card-section">
+                        <img src="assets/img/generic/rectangle-1.jpg">
+                    </div>
+                    <div class="card-section">
+                        <p>This is a simple card with an image inside a `.card-section`.</p>
+
+                <div class="card .food-card" id="">
 
                     <div class="card-section">
                         <div class="order">
-                            <p id="food-head" class="card-head">Pad Thai</p>
-
+                            <p>Pad Thai</p>
                         </div>
                         <img
                             src="https://www.aheadofthyme.com/wp-content/uploads/2020/04/10-minute-chicken-pad-thai-7.jpg">
@@ -83,37 +78,17 @@
                             vegetables.</p>
 
                     </div>
-                    <a class="button large save" href="#">Save Meal</a>
                 </div>
             </div>
         </div>
-
-
-        <div class="grid-x">
-            <div class="cell small-12">
-                <button class="button btn redo-button" type="button" data-toggle="example-dropdown">Try Again</button>
-                <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
-                    <div class="grid-x">
-                    <a class="button large redo redo-movie small-6" href="#">Redo Movie</a>
-                    <a class="button large redo redo-meal small-6" href="#">Redo Meal</a>
-                    <a class="button large redo redo-both small-12" href="#">Redo Both</a>
-                </div>
-                </div>
-
-            </div>
-
+        <button class="button" data-dropdown-menu type="button" data-toggle="example-dropdown-bottom-center">Try
+            Again</button>
+        <div class="dropdown-pane" data-dropdown-menu data-position="bottom" data-alignment="center"
+            id="example-dropdown-bottom-center" data-dropdown data-auto-focus="true">
+            <p>Test</p>
         </div>
-    </div>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
 
 </body>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
@@ -128,7 +103,6 @@
 <script src="./assets/js/script.js"></script>
 
 <script src="assets/js/restaurantApi.js"></script>
-
 
 
 </html>
