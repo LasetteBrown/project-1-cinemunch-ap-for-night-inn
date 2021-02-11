@@ -7,6 +7,7 @@ body{
     background-size: cover;
 }
 
+
 header {
     height: 100px;
     display: block;
@@ -31,14 +32,6 @@ img {
     border: 10px;
 }
 
-/* .site {
-    color: honeydew; 
-    padding-right: 20px;
-    float: left;
-    font-size: 100px;
-    font-family: 'Just Another Hand', cursive;
-
-} */
 
 h1 {
     color: honeydew;
@@ -68,12 +61,23 @@ h2 {
 
 .card-section {
     text-align: center;
+    font-family: 'Bangers';
+    height: 5em;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)  
 }
+
 
 .card-head {
     font-weight: bold;
     font-size: 25px;
 }
+
 
 .button {
     font-family: 'Bangers';
@@ -84,6 +88,7 @@ h2 {
    
     background-color: darkslateblue;
     border-radius: 10px;
+
 }
 
 /* .helpButton {

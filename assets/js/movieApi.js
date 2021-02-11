@@ -16,11 +16,20 @@ function movieApi() {
                 movies = movies.concat(data.results)
                 // console.log(data.results);
                 // if (i === 4){
-                console.log(movies);
+
+                // console.log(movies);
+
                 // call function to update display here
                 //}
             })
     }
+
+    randomMovie()
 }
 movieApi()
 // make display function (inside should the random number thing)
+
+function randomMovie() {
+    var randomMovie = movies[Math.floor(Math.random() * movies.length)]
+    console.log(randomMovie)
+}
