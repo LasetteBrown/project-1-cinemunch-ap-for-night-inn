@@ -1,15 +1,52 @@
-console.log(" restaurantApi.js linked")
+console.log("food.js linked");
 
 
 var foodRec = "";
 var restaurants = [];
-var cuisines = [];
-var locations = [];
 var requestOptions = {
     method: 'GET',
     headers: { "user-key": "ddc0804243a2709a5f5ba68838e78c7b" },
     redirect: 'follow'
 };
+
+var foodHistory = [];
+
+foodHistory = JSON.parse(localStorage.getItem("restaurants"));
+//unless there is nothing saved...
+if (foodHistory === null) {
+    foodHistory = []
+};
+
+function saveRestaurant() {
+
+    var restaurantName = foodRec.restaurant.name
+    foodHistory.push(restaurantName)
+
+    window.localStorage.setItem("restaurants", JSON.stringify(foodHistory));
+
+};
+
+function displayFood() {
+
+    console.log(foodRec.restaurant.menu_url);
+    $("#food-head").text(foodRec.restaurant.name);
+    $("#food-image").attr("src", foodRec.restaurant.featured_image);
+    $("#food-cuisine").text(foodRec.restaurant.cuisines);
+
+    var menuLink = $("<a>");
+    menuLink.attr("href", foodRec.restaurant.menu_url);
+    menuLink.text("Menu");
+    $("#food-description").append(menuLink);
+
+};
+
+function randomFood() {
+
+    foodRec = restaurants[Math.floor(Math.random() * restaurants.length)];
+
+    displayFood();
+};
+
 function restaurantApi() {
     var foodUrl = `https://developers.zomato.com/api/v2.1/search?entity_id=305&entity_type=city&collection_id=1`;
     fetch(foodUrl, requestOptions)
@@ -17,19 +54,29 @@ function restaurantApi() {
             return response.json();
         })
         .then(function (data) {
-            // restaurants = restaurants.concat(data.restaurants[0])
-            // console.log(restaurants)
+
             console.log(data)
-            // for (var i = 0; i < 30; i++) {
+            restaurants = restaurants.concat(data.restaurants)
 
-            //     restaurants = restaurants.concat(data.restaurants[i].restaurant.name);
-            //     cuisines = cuisines.concat(data.restaurants[i].restaurant.cuisines);
-            //     locations = locations.concat(data.restaurants[i].restaurant.location.address);
-            //     var photo = data.restaurants[i].restaurant.photos_url;
-            // }
-            foodRec = data.restaurants[Math.floor(Math.random() * data.restaurants.length)]
-
+            randomFood()
         })
-}
+};
+
+//when the 'choose a new restaurant' button is clicked
+$(".redo-meal").on("click", function () {
+    //then a different restaurant is generated 
+    //and replaces the restaurant displayed on the page.
+    randomFood();
+});
+
+$(".redo-both").on("click", function () {
+
+    randomFood();
+});
+
+$("#save-food-btn").on("click", function () {
+    saveRestaurant()
+});
+
 restaurantApi();
 
