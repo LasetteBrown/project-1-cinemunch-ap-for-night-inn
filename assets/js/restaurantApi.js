@@ -32,7 +32,15 @@ function saveRestaurant() {
 function displayFood() {
 
     $("#food-head").text(foodRec.restaurant.name);
-    $("#food-image").attr("src", foodRec.restaurant.featured_image);
+
+    if (foodRec.restaurant.featured_image === "") {
+        $("#food-image").attr("src", "./assets/images/placeholderAlt.jpg");
+
+    } else {
+
+        $("#food-image").attr("src", foodRec.restaurant.featured_image);
+    }
+
     $("#food-cuisine").text(foodRec.restaurant.cuisines);
 
     menuLinkDiv.html("")
@@ -58,7 +66,6 @@ function restaurantApi() {
         })
         .then(function (data) {
 
-            console.log(data)
             restaurants = restaurants.concat(data.restaurants)
 
             randomFood()
