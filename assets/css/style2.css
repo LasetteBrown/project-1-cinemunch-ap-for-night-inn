@@ -8,7 +8,16 @@ body {
     background-size: cover;
 }
 
-
+.logo {
+    margin-top: 10px;
+    height: 110px;
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px;
+}
 
 h2 {
     font-family: 'Encode Sans Condensed', sans-serif;
@@ -18,31 +27,46 @@ h2 {
     
 }
 
-
-
-
-.card {
-    background-color: black;
-    color: blanchedalmond;
-    position: relative;
-    border-style: none;
-    margin-right: 0;
+#movie-colOne {
+    padding:3px;
 }
+
+#rest-colOne {
+    padding: 3px;
+}
+
+
 
 #movie-card {
     text-align: center;
-    margin-bottom: 10%;
+    
 }
 
 #restaurant-card {
     text-align: center;
 }
 
+.card {
+    background-color: black;
+    color: honeydew;
+    position: relative;
+    border-style: none;
+    margin-right: 0;
+}
 
-
+.button  {
+    font-family: 'Bangers';
+    border-radius: 10px;
+    background-color: darkslateblue;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    
+}
 
 .footer {
-    position: fixed;
+    position: sticky;
     left: 0;
     bottom: 0;
     width: 100%;

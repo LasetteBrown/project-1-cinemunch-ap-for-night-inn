@@ -1,5 +1,6 @@
 console.log("history.js is linked")
 
+
 var movieHistory = [];
 var foodHistory = [];
 
@@ -22,7 +23,7 @@ function displayHistory() {
 
     for (var i = 0; i < movieHistory.length; i++) {
         var movieDiv = $("<div>");
-        movieDiv.attr("class", "cell small-2 large-offset-3 align-self-middle");
+        movieDiv.attr("class", "cell small-3 large-offset-2 align-self-middle");
         movieDiv.attr("id", "movie-colOne");
         movieDiv.text(movieHistory[i]);
         $("#movie-history-div").append(movieDiv);
@@ -31,7 +32,7 @@ function displayHistory() {
 
     for (var i = 0; i < foodHistory.length; i++) {
         var restaurantDiv = $("<div>");
-        restaurantDiv.attr("class", "cell small-2 large-offset-3");
+        restaurantDiv.attr("class", "cell small-3 large-offset-2");
         restaurantDiv.attr("id", "rest-colOne");
         restaurantDiv.text(foodHistory[i]);
         $("#food-history-div").append(restaurantDiv);
