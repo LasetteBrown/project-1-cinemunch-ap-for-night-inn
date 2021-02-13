@@ -66,7 +66,6 @@ function restaurantApi() {
         })
         .then(function (data) {
 
-            console.log(data)
             restaurants = restaurants.concat(data.restaurants)
 
             randomFood()

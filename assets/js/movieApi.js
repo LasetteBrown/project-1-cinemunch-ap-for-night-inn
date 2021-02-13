@@ -57,15 +57,11 @@ function randomMovie() {
 
     movieRec = movies[Math.floor(Math.random() * movies.length)];
 
-    if (isPaused) {
-
-    } else {
-        displayMovie();
-    }
+    displayMovie();
 };
 
 function movieApi() {
-    isPaused = true;
+
     for (var i = 0; i < 249; i++) {
         var movieUrl = `https://api.themoviedb.org/3/discover/movie?api_key=4090692509e0d1e371f6626e463b213b&page=${i + 1}`;
 
@@ -76,9 +72,9 @@ function movieApi() {
             .then(function (data) {
                 movies = movies.concat(data.results)
                 randomMovie()
+
             })
     }
-    isPaused = false;
 };
 
 $(".redo-movie").on("click", function () {
