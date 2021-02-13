@@ -23,42 +23,45 @@
         <div id ="equal" class="grid-x">
             <div class="card-cell cell small-12 medium-6">
                 <h2>Watch This</h2>
-                <div class="card">
+                <div class="card" id="movie-card">
                     <div class="card-section">
-                        <p class="card-head">Semi-Pro</p>
+                        <p class="card-head" id="movie-title">Semi-Pro</p>
 
 
-                        <img
+                        <img id="movie-image"
                             src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR0S7Vrhykg5xuCUtbt-Wb8kP3SlRxwGzLpGOcE1FhfCn-9RkDp">
                     </div>
                     <div id="movie-head" class="card-section">
-                        <p>In 1976, singer Jackie Moon (Will Ferrell) uses the profits from his only hit single to
+                        <p id="movie-summery">In 1976, singer Jackie Moon (Will Ferrell) uses the profits from his only
+                            hit single to
                             fulfill a longtime dream of owning a basketball team. His team, the Flint Michigan Tropics,
                             is the worst team in the league, and what's more, the franchise may fold when the ABA and
                             NBA announce plans to merge. It's up to Jackie and the Tropics to turn their game around and
                             slam-dunk their chance for survival.</p>
                     </div>
-                    
-                    <a class="button large save" href="#">Save Movie</a>
+
+                    <a class="button large save" id="save-movie-btn" href="#">Save Movie</a>
                 </div>
             </div>
             <div class="card-cell cell small-12 medium-6">
                 <h2>Order This</h2>
                 <div class="card">
-                    <div class="card-section">
+                    <div class="card-section" id="food-section">
                         <div class="order">
                             <p id="food-head" class="card-head">Pad Thai</p>
                         </div>
-                        <img
+                        <img id="food-image"
                             src="https://www.aheadofthyme.com/wp-content/uploads/2020/04/10-minute-chicken-pad-thai-7.jpg">
                     </div>
-                    <div class="card-section">
-                        <p>Pad thai, or phad thai, is a stir-fried rice noodle dish commonly served as a street food and
+                    <div class="card-section" id="food-description">
+                        <p id="food-cuisine">Pad thai, or phad thai, is a stir-fried rice noodle dish commonly served as
+                            a
+                            street food and
                             at most restaurants in Thailand as part of the country's cuisine. It is typically made with
                             rice noodles, chicken, beef or tofu, peanuts, a scrambled egg, and bean sprouts, among other
                             vegetables.</p>
                     </div>
-                    <a class="button large save" href="#">Save Meal</a>
+                    <a class="button large save" id="save-food-btn" href="#">Save Meal</a>
                 </div>
             </div>
         </div>
@@ -68,10 +71,10 @@
                 <button class="button btn redo-button" type="button" data-toggle="example-dropdown">Try Again</button>
                 <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
                     <div class="grid-x">
-                    <a class="button large redo redo-movie small-6" href="#">Redo Movie</a>
-                    <a class="button large redo redo-meal small-6" href="#">Redo Meal</a>
-                    <a class="button large redo redo-both small-12" href="#">Redo Both</a>
-                </div>
+                        <a class="button large redo redo-movie small-6" href="#">Redo Movie</a>
+                        <a class="button large redo redo-meal small-6" href="#">Redo Meal</a>
+                        <a class="button large redo redo-both small-12" href="#">Redo Both</a>
+                    </div>
                 </div>
 
             </div>
@@ -84,9 +87,10 @@
     <script>
         $(document).foundation();
     </script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/restaurantApi.js"></script>
+
     <script src="./assets/js/movieApi.js"></script>
+    <script src="./assets/js/restaurantApi.js"></script>
+
 
 
 </body>
