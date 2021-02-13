@@ -7,72 +7,110 @@ body{
     background-size: cover;
 }
 
-<<<<<<< HEAD
-.saved {
-=======
-.site {
->>>>>>> 276962a9305b3af712246c3a32618544c30d2c7f
-    color: honeydew; 
-    text-align: right;
-    padding-right: 20px;
+header {
+    height: 100px;
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+img {
+    border-radius: 10px;
+}
+
+.logo {
+    margin-top: 10px;
+    height: 110px;
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 10px;
 }
 
 h1 {
     color: honeydew;
-    font-size: 70px;
+    font-size: 50px;
+    padding-top: 50px;
     text-align: center;
-    font-family: 'Bangers';
-    height: 5em;
-    position: relative;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)  
-}
-h2 {
-    color: honeydew;
-    text-align: center;
+    font-family: 'Bangers'; 
 }
 
+h2 {
+    font-size: 50px;
+    color: honeydew;
+    text-align: center;
+    font-family: 'Bangers';
+}
+#equal {
+    box-sizing: border-box;
+}
 .card {
-    width: 50%;
+    height: auto;
+    width: 75%;
     display: block;
     margin-bottom: 25px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(212, 212, 212);
+    border-radius: 10px;
 }
+
 .card-section {
     text-align: center;
-    font-family: 'Bangers';
-    height: 5em;
-    position: relative;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)  
 }
 
+.card-head {
+    font-weight: bold;
+    font-size: 25px;
+}
 
 .button {
-    position: relative;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    background-color: darkslateblue;
-<<<<<<< HEAD
-=======
+    font-family: 'Bangers';
     border-radius: 10px;
->>>>>>> 276962a9305b3af712246c3a32618544c30d2c7f
 }
+
+.btn {
+   
+    background-color: darkslateblue;
+    border-radius: 10px;
+}
+
+.save {
+    display: block;
+    margin-bottom: 25px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkslateblue;
+}
+
+.redo-button {
+    display: block;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    font-size: 30px;
+}
+
+.dropdown-pane {
+    background-color: rgb(212, 212, 212);
+}
+.redo {
+    width: 100%;
+    background-color: darkslateblue; 
+    border: rgb(212, 212, 212);
+    border-width: 1px;
+    border-style: solid;
+    margin-bottom: 1px;
+}
+
 
 
