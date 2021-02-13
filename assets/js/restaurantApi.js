@@ -9,6 +9,9 @@ var requestOptions = {
     redirect: 'follow'
 };
 
+var menuLinkDiv = $("<div>")
+$("#food-description").append(menuLinkDiv);
+
 var foodHistory = [];
 
 foodHistory = JSON.parse(localStorage.getItem("restaurants"));
@@ -27,16 +30,18 @@ function saveRestaurant() {
 };
 
 function displayFood() {
+    menuLinkDiv.html("")
 
     $("#food-head").text(foodRec.restaurant.name);
     $("#food-image").attr("src", foodRec.restaurant.featured_image);
     $("#food-cuisine").text(foodRec.restaurant.cuisines);
 
-    // var menuLink = $("<a>");
-    // menuLink.attr("href", foodRec.restaurant.menu_url);
-    // menuLink.text("Menu");
-    // $("#food-description").append(menuLink);
 
+    var menuLink = $("<a>");
+    menuLink.attr("href", foodRec.restaurant.menu_url);
+    menuLink.attr("target", "blank")
+    menuLink.text("Menu");
+    menuLinkDiv.append(menuLink)
 };
 
 function randomFood() {
