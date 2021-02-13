@@ -22,7 +22,7 @@ img {
 
 .logo {
     margin-top: 10px;
-    height: 100px;
+    height: 110px;
     display: block;
     margin-bottom: 25px;
     align-items: center;
@@ -30,15 +30,6 @@ img {
     margin-right: auto;
     border: 10px;
 }
-
-/* .site {
-    color: honeydew; 
-    padding-right: 20px;
-    float: left;
-    font-size: 100px;
-    font-family: 'Just Another Hand', cursive;
-
-} */
 
 h1 {
     color: honeydew;
@@ -54,8 +45,11 @@ h2 {
     text-align: center;
     font-family: 'Bangers';
 }
-
+#equal {
+    box-sizing: border-box;
+}
 .card {
+    height: auto;
     width: 75%;
     display: block;
     margin-bottom: 25px;
@@ -85,20 +79,6 @@ h2 {
     background-color: darkslateblue;
     border-radius: 10px;
 }
-
-/* .helpButton {
-    display: block;
-   
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    
-    align-content: center;
-} */
-
-/* .redo-button {
-    align-content: center;
-} */
 
 .save {
     display: block;

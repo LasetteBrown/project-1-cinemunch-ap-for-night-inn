@@ -26,6 +26,7 @@ h2 {
     color: blanchedalmond;
     position: relative;
     border-style: none;
+    margin-right: 0;
 }
 
 #movie-card {
