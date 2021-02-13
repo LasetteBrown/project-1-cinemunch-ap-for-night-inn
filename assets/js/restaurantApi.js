@@ -30,13 +30,12 @@ function saveRestaurant() {
 };
 
 function displayFood() {
-    menuLinkDiv.html("")
 
     $("#food-head").text(foodRec.restaurant.name);
     $("#food-image").attr("src", foodRec.restaurant.featured_image);
     $("#food-cuisine").text(foodRec.restaurant.cuisines);
 
-
+    menuLinkDiv.html("")
     var menuLink = $("<a>");
     menuLink.attr("href", foodRec.restaurant.menu_url);
     menuLink.attr("target", "blank")
