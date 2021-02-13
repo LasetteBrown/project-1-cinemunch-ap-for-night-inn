@@ -21,18 +21,18 @@ function displayHistory() {
     $("#food-history-div").html("");
 
     for (var i = 0; i < movieHistory.length; i++) {
-        var movieDiv = $("<div>");
-        movieDiv.attr("class", "cell small-2 large-offset-3 align-self-middle");
-        movieDiv.attr("id", "movie-colOne");
-        movieDiv.text(movieHistory[i]);
-        $("#movie-history-div").append(movieDiv);
+        var movieP = $("<p>");
+        movieP.attr("class", "cell small-4 large-offset-3 align-self-middle")
+        movieP.attr("id", "movie-colTwo")
+        movieP.text(movieHistory[i].trim());
+        $("#movie-history-div").append(movieP);
     };
 
 
     for (var i = 0; i < foodHistory.length; i++) {
-        var restaurantDiv = $("<div>");
-        restaurantDiv.attr("class", "cell small-2 large-offset-3");
-        restaurantDiv.attr("id", "rest-colOne");
+        var restaurantDiv = $("<p>");
+        restaurantDiv.attr("class", "cell small-4 large-offset-3");
+        restaurantDiv.attr("id", "rest-colTwo");
         restaurantDiv.text(foodHistory[i]);
         $("#food-history-div").append(restaurantDiv);
     };
