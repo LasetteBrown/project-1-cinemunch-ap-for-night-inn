@@ -28,15 +28,14 @@ function saveRestaurant() {
 
 function displayFood() {
 
-    console.log(foodRec.restaurant.menu_url);
     $("#food-head").text(foodRec.restaurant.name);
     $("#food-image").attr("src", foodRec.restaurant.featured_image);
     $("#food-cuisine").text(foodRec.restaurant.cuisines);
 
-    var menuLink = $("<a>");
-    menuLink.attr("href", foodRec.restaurant.menu_url);
-    menuLink.text("Menu");
-    $("#food-description").append(menuLink);
+    // var menuLink = $("<a>");
+    // menuLink.attr("href", foodRec.restaurant.menu_url);
+    // menuLink.text("Menu");
+    // $("#food-description").append(menuLink);
 
 };
 
