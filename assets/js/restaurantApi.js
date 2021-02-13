@@ -34,7 +34,7 @@ function displayFood() {
     $("#food-head").text(foodRec.restaurant.name);
 
     if (foodRec.restaurant.featured_image === "") {
-        $("#food-image").attr("src", "./assets/images/ubereatsplaceholder.jpg");
+        $("#food-image").attr("src", "./assets/images/placeholderAlt.jpg");
 
     } else {
 
