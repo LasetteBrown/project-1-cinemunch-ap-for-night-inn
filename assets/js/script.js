@@ -1,147 +1,136 @@
-console.log("linked")
+console.log("script.js linked")
 
 var movieRec = ""
-var foodRec = ""
-
 var movies = [];
 var requestOptions = {
     method: 'GET',
     redirect: 'follow'
 };
 
-var history = []
+// var restaurants = [];
+// foodRec = ""
+// var placeName = "";
+// var cuisineType = "";
+// var location = "";
+// var photo
+// var restaurantRequestOptions = {
+//     method: 'GET',
+//     headers: { "user-key": "ddc0804243a2709a5f5ba68838e78c7b" },
+//     redirect: 'follow'
+// };
 
-history = JSON.parse(localStorage.getItem("previous"));
-//unless there is nothing saved...
-if (history === null) {
-    history = []
+// var history = []
+
+// history = JSON.parse(localStorage.getItem("previous"));
+// //unless there is nothing saved...
+// if (history === null) {
+//     history = []
+// }
+
+function displayMovie() {
+
+    $("#movie-title").text(movieRec.title)
+    $("#movie-image").attr("src", "https://image.tmdb.org/t/p/w500" + movieRec.poster_path)
+    $("#movie-summery").text(movieRec.overview)
+}
+
+function displayFood() {
+
+    $("#food-head").text(placeName)
+    $("#food-image").attr("src", photo)
+    $("#food-cuisine").text(cuisineType)
+
+}
+
+function randomMovie() {
+
+    movieRec = movies[Math.floor(Math.random() * movies.length)]
+
+    displayMovie()
+
+}
+
+function randomFood() {
+
+    foodRec = restaurants[Math.floor(Math.random() * data.restaurants.length)]
+
+    displayFood()
 }
 
 
 function movieApi() {
     for (var i = 0; i < 249; i++) {
         var movieUrl = `https://api.themoviedb.org/3/discover/movie?api_key=4090692509e0d1e371f6626e463b213b&page=${i + 1}`;
-        //console.log(movieUrl)
+
         fetch(movieUrl, requestOptions)
             .then(function (response) {
                 return response.json();
             })
             .then(function (data) {
                 movies = movies.concat(data.results)
-                // console.log(data.results);
-                // if (i === 4){
-                // console.log(movies);
-                // call function to update display here
-                //}
+
+                randomMovie()
             })
     }
-    console.log("ready")
 
 }
 
-// make display function (inside should the random number thing)
+function restaurantApi() {
+    var foodUrl = `https://developers.zomato.com/api/v2.1/search?entity_id=305&entity_type=city&collection_id=1`;
+    fetch(foodUrl, restaurantRequestOptions)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
 
-function randomMovie() {
-    movieRec = movies[Math.floor(Math.random() * movies.length)]
-    console.log(movieRec)
-    displayMovie()
+            console.log(data)
+            restaurants = restaurants.concat(data.restaurants)
+
+            randomFood()
+        })
 }
 
+// function saveRecs() {
+//     var previousRecs = {
+//         movie: movieRec,
+//         food: foodRec,
+//     }
 
-function saveRecs() {
-    var previousRecs = {
-        movie: movieRec,
-        food: foodRec,
-    }
+//     history.push(previousRecs)
 
-    history.push(previousRecs)
+//     window.localStorage.setItem("previous", JSON.stringify(history));
 
-    window.localStorage.setItem("previous", JSON.stringify(history));
-
-}
-
-
-function displayMovie() {
-    //and displayed on the page with title, summery, and poster image of the film
-    // $("#movie-card").html("")
-    console.log("display attempt")
-    // var movieTitle = $("<h3>")
-    $("#movie-title").text(movieRec.title)
-    // $("#movie-card").append(movieTitle)
-
-    // var movieImage = $("<img>")
-    $("#movie-image").attr("src", "https://image.tmdb.org/t/p/w500" + movieRec.poster_path)
-    // $("#movie-card").append(movieImage)
-
-    // var movieSummery = $("<p>")
-    $("#movie-summery").text(movieRec.overview)
-    // $("#movie-card").append(movieSummery)
-}
-
-function displayFood() {
-
-    //and displayed on the page with restaurant title, description (and optional other things).
-    $(".food-card").html("")
-
-    var foodRestaurant = $("<h3>")
-    foodRestaurant.text(foodRec.restaurant)
-    $(".food-card").append(foodRestaurant)
-
-    var foodImage = $("<img>")
-    foodImage.attr("src", foodRec.image)
-    $(".food-card").append(foodImage)
-
-    var foodDescript = $("<p>")
-    foodDescript.text(foodRec.description)
-    $(".food-card").append(foodDescript)
-
-}
-
-
-
-
-function getFood() {//and a random delivery restaurant is generated
-    //fetch random restaurane from api
-    foodRec = //random restaurant fetched
-        displayFood()
-}
-
-
-//When the 'help me' button is clicked,
-$(".helpBtn").on("click", function () {
-    //redirect to a new page
-    window.location.href = "index2.html"
-    randomMovie()
-    // getFood()
-})
+// }
 
 //(optional) with a form asking for user preferences/perameters
 //(optional) use those parameters to limit our search
 
 //when the 'choose a new movie' button is clicked
 $(".redo-movie").on("click", function () {
+
+    //Then a different random movie is generated
+    //and replaces the movie displayed on the page.
     randomMovie()
 })
 
-//Then a different random movie is generated
-//and replaces the movie displayed on the page.
 
 //when the 'choose a new restaurant' button is clicked
 $(".newFoodBtn").on("click", function () {
-    getFood()
+    //then a different restaurant is generated 
+    //and replaces the restaurant displayed on the page.
+    randomFood()
 })
 
 $(".redo-both").on("click", function () {
     randomMovie()
-    getFood()
+    // randomFood()
 })
-//then a different restaurant is generated 
-//and replaces the restaurant displayed on the page.
+
 
 //When the 'save' button is clicked
-$(".saveBtn").on("click", function () {
-    saveRecs()
-})
+// $(".saveBtn").on("click", function () {
+//     saveRecs()
+// })
 
 //then the currently displayed recommendations are saved into local storage.
 
@@ -149,7 +138,8 @@ $(".saveBtn").on("click", function () {
 $(".historyBtn").on("click", function () {
     //then we are redirected to a third page
     window.location.href = "index3.html"
+    //which displays past recommendations.
 })
 
 movieApi()
-//which displays past recommendations.
+// restaurantApi();

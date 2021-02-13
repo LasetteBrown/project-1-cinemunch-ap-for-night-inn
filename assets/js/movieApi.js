@@ -1,3 +1,4 @@
+console.log(" movieApi.js linked")
 
 var movies = [];
 var requestOptions = {
