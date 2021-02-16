@@ -25,9 +25,10 @@ No installation required - all the user needs to do to access the application is
 ## Usage
 Provide instructions and examples for use. Include screenshots as needed.
 To add a screenshot, create an assets/images folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-![Landing Page](assets/images/screenshot.png)
-![Random movie and random restaurant display]()
-![History page]()
+![Landing Page](assets/images/homePage.png)
+![Random movie and random restaurant display](assets/images/app3.png)
+![Random movie and random restaurant display](assets/images/app2.png)
+![History page](assets/images/history.png)
 
 ## Credits
 All collaborators include:
@@ -45,10 +46,12 @@ For styling, we used [Foundation by Zurb](https://get.foundation/sites.html) as 
 For our background image, we used an image from Unsplash made by [Felix Mooneeram](https://unsplash.com/@felixmooneeram). We also used placeholder images from Unsplash made by [Kelly Sikkema](https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText).
 
 We also made a logo, which was created using [Gravit](https://designer.gravit.io/?psd-campaign=1693840974&psd-adgroup=102082661913&psd-kw=gravit&gclid=EAIaIQobChMI8oGHjaTt7gIVwfDjBx0T4w3MEAAYASAAEgKBrPD_BwE&campaignid=1693840974&adgroupid=102082661913&adid=433148240551&gclid=EAIaIQobChMI8oGHjaTt7gIVwfDjBx0T4w3MEAAYASAAEgKBrPD_Bw).
+
 ## Features
 In our application, the user has the option of generating new movie and restaraunt choices by selecting the "Try Again" button. By doing this, you can either select to redo the movie or restaurant separately, or redo both of them. 
 
 Under each movie and restaurant choice, the user has the option of saving their movie or meal choice to local storage. This is viewable by clicking the "History" button at the button of the screen, where the user will be redirected to a separate page to look at their saved choices. 
 
-
+# Google Slides Presentation
+[Click here to view our presentation](https://docs.google.com/presentation/d/1ku9Q3lYiwbY8iuADu1CdrXGcGPRsqVXrSGJ_j1zafW8/edit?ts=601eeda4#slide=id.p)
 
