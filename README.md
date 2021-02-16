@@ -13,7 +13,7 @@ Overall, we faced challenges such as working together in GitHub to merge our ind
 [Link to CineMunch](https://lasettebrown.github.io/project-1-cinemunch-ap-for-night-inn/)
 
 
-## Table of Contents (Optional)
+## Table of Contents 
 ## Installation
 - [Usage](#Usage)
 - [Credits](#Credits)
@@ -52,6 +52,6 @@ In our application, the user has the option of generating new movie and restarau
 
 Under each movie and restaurant choice, the user has the option of saving their movie or meal choice to local storage. This is viewable by clicking the "History" button at the button of the screen, where the user will be redirected to a separate page to look at their saved choices. 
 
-# Google Slides Presentation
+## Google Slides Presentation
 [Click here to view our presentation](https://docs.google.com/presentation/d/1ku9Q3lYiwbY8iuADu1CdrXGcGPRsqVXrSGJ_j1zafW8/edit?ts=601eeda4#slide=id.p)
 
